@@ -1,0 +1,184 @@
+/* Styles spécifiques à la page AVLS (avls.html) */
+
+.page-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/image1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
+    padding: 80px 20px;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-header h1 {
+    font-size: 3.5em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.3em;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+/* Section des chiffres clés */
+.stats-section {
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.stats-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat-item {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.stat-item span {
+    display: block;
+    font-size: 3em;
+    line-height: 1;
+}
+
+/* Section principale de l'Aventure */
+.adventure-details {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.adventure-details h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.adventure-content {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.adventure-text {
+    flex: 2;
+}
+
+.adventure-image {
+    flex: 1;
+    align-self: flex-start;
+    min-width: 300px;
+}
+
+.adventure-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Carte d'appel à candidature - MISE À JOUR (Fond Blanc, Texte Noir) */
+.call-to-action-card {
+    background-color: var(--text-light); /* Fond Blanc */
+    color: var(--text-dark); /* Texte Noir (pour la lisibilité) */
+    padding: 40px;
+    border-radius: 10px;
+    border-left: 8px solid var(--primary-color);
+    margin-top: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Ajout d'une légère ombre */
+}
+
+.call-to-action-card h3 {
+    color: var(--primary-color);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.call-to-action-card p {
+    margin-bottom: 10px;
+}
+
+.call-to-action-card strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.cta-buttons a {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-right: 15px;
+    transition: opacity 0.3s;
+}
+
+.cta-buttons a:hover {
+    opacity: 0.8;
+}
+
+/* Section Galerie */
+.gallery-section {
+    background-color: var(--background-light);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+.image-gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.03);
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* espace entre les liens */
+}
+
+nav a {
+    display: flex;
+    flex-direction: column; /* Garde les 3 langues les unes sous les autres */
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tu peux ajuster le style si besoin */
+nav a:hover div[data-lang="fr"],
+nav a:hover div[data-lang="en"],
+nav a:hover div[data-lang="es"] {
+    text-decoration: underline;
+}

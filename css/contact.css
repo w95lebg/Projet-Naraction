@@ -1,0 +1,173 @@
+/* Styles spécifiques à la page Contact (contact.html) */
+
+.page-header {
+    color: black;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3em;
+    color: var(--primary-color);
+}
+
+/* Section Contact et Formulaire */
+.contact-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start; /* Alignement du haut */
+}
+
+.contact-form-container {
+    flex: 1; /* Prend une part de l'espace */
+    min-width: 400px;
+}
+
+.contact-image-container {
+    flex: 1; /* Prend l'autre part de l'espace */
+    min-width: 400px;
+    position: sticky; /* L'image reste visible si l'utilisateur fait défiler */
+    top: 100px;
+}
+
+.contact-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles du Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--text-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+form label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+form button {
+    margin-top: 25px;
+    /* Utilisation des styles de bouton existants via le mixin (ou duplication ici) */
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Aligne le bouton à gauche */
+}
+
+form button:hover {
+    background-color: #e0981f; 
+}
+
+/* Section Réseaux Sociaux */
+.social-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--background-light);
+}
+
+.social-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.social-icons img {
+    height: 40px;
+    vertical-align: middle;
+}
+
+/* Responsive pour les petits écrans */
+@media (max-width: 900px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-image-container {
+        order: -1; /* Place l'image au-dessus du formulaire sur mobile */
+        margin-bottom: 30px;
+        position: static;
+    }
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* espace entre les liens */
+}
+
+nav a {
+    display: flex;
+    flex-direction: column; /* Garde les 3 langues les unes sous les autres */
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tu peux ajuster le style si besoin */
+nav a:hover div[data-lang="fr"],
+nav a:hover div[data-lang="en"],
+nav a:hover div[data-lang="es"] {
+    text-decoration: underline;
+}
+.lang-option {
+    cursor: pointer;
+    opacity: 0.6;
+    font-size: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.lang-option.active-lang {
+    opacity: 1;
+    font-size: 22px;
+}
+
+.lang-option:hover {
+    opacity: 1;
+}

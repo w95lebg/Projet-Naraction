@@ -1,0 +1,137 @@
+/* Styles spécifiques à la page d'Accueil (index.html) */
+
+/* Section Héro (Bienvenue) */
+.hero-section {
+    height: 80vh; 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 40px;
+    border-radius: 10px;
+    color: var(--text-light);
+}
+
+.hero-overlay h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-overlay p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Section Fonctionnalités/Avantages (Carrés animés) */
+.features-section {
+    padding: 60px 20px;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.feature-card-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border-left: 5px solid var(--primary-color);
+    text-align: left;
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 30px rgba(245, 166, 35, 0.4);
+}
+
+/* */
+
+main{
+  width: 100%;
+  align-content: center;
+  text-align: center;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+
+video{
+  width: 90%;
+}
+
+main img{
+  width: 70%;
+ 
+}
+
+img.partenaires{
+  width: 5%;
+}
+
+ .img-table {
+  width: 100%;           
+  aspect-ratio: 1 / 1;   
+  overflow: hidden;       
+}
+
+
+ .img-table img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    
+  display: block;          
+}
+
+.noir{
+  background-color: black;
+  color: white;
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* espace entre les liens */
+}
+
+nav a {
+    display: flex;
+    flex-direction: column; /* Garde les 3 langues les unes sous les autres */
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tu peux ajuster le style si besoin */
+nav a:hover div[data-lang="fr"],
+nav a:hover div[data-lang="en"],
+nav a:hover div[data-lang="es"] {
+    text-decoration: underline;
+}

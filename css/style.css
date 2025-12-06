@@ -1,0 +1,246 @@
+/* Variables CSS */
+:root {
+    --primary-color: #f5a623; /* Couleur NarAction */
+    --text-dark: #333;
+    --text-light: #fff;
+    --background-dark: #000;
+    --background-light: #f4f4f4;
+}
+
+/* Styles Généraux et Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+/* -------------------- */
+/* Barre de Navigation (Header) */
+/* -------------------- */
+
+header {
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo img {
+    height: 50px; /* Ajustez la taille du logo */
+    vertical-align: middle;
+}
+
+nav a {
+    color: var(--text-dark);
+    margin: 0 15px;
+    padding: 5px 0;
+    font-weight: 600;
+    position: relative;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--text-light);
+}
+
+/* Soulignement stylé pour le lien actif ou au survol */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--text-light);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+.language-selector span {
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 0 5px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.language-selector span:hover,
+.language-selector .active-lang {
+    opacity: 1;
+}
+
+/* -------------------- */
+/* Section Héro (Bienvenue) */
+/* -------------------- */
+
+.hero-section {
+    height: 80vh; /* 80% de la hauteur de la fenêtre */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    /* Couleur de l'image de l'exemple est noir/foncé, donc le texte doit être clair */
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Ombre pour rendre le texte lisible */
+    padding: 40px;
+    border-radius: 10px;
+    color: var(--text-light);
+}
+
+.hero-overlay h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-overlay p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-join {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-join:hover {
+    background-color: darken(var(--primary-color), 10%); /* Nécessite un préprocesseur, sinon utiliser une couleur fixe plus foncée */
+    background-color: #e0981f; /* Variante plus foncée */
+    transform: translateY(-2px);
+}
+
+/* -------------------- */
+/* Section Mission */
+/* -------------------- */
+
+.mission-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: var(--background-light);
+}
+
+.mission-text-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-text-container h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.mission-text-container p {
+    font-size: 1.1em;
+    color: var(--text-dark);
+}
+
+/* -------------------- */
+/* Section Fonctionnalités (Carrés animés) */
+/* -------------------- */
+
+.features-section {
+    padding: 60px 20px;
+    background-color: var(--background-dark); /* Fond sombre comme dans l'exemple */
+    color: var(--text-light);
+    text-align: center;
+}
+
+.feature-card-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.05); /* Carrés légèrement visibles sur fond noir */
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border-left: 5px solid var(--primary-color);
+    text-align: left;
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Effet de shadow plus visible au survol */
+    box-shadow: 0 15px 30px rgba(245, 166, 35, 0.4);
+}
+
+/* -------------------- */
+/* Pied de Page (Footer) */
+/* -------------------- */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-dark);
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links a {
+    color: var(--text-dark);
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,99 @@
+/* Styles spécifiques à la page Atelier (atelier.html) */
+
+.page-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/atelier_background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
+    padding: 80px 20px;
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-header h1 {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.1em;
+}
+
+.atelier-presentation {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Section Avis */
+.testimonials-section {
+    background-color: var(--background-light);
+    padding: 60px 20px;
+}
+
+.testimonials-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    color: var(--text-dark);
+}
+
+.testimonial-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: var(--text-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--primary-color);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.testimonial-card .author {
+    display: block;
+    text-align: right;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.stars {
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* espace entre les liens */
+}
+
+nav a {
+    display: flex;
+    flex-direction: column; /* Garde les 3 langues les unes sous les autres */
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tu peux ajuster le style si besoin */
+nav a:hover div[data-lang="fr"],
+nav a:hover div[data-lang="en"],
+nav a:hover div[data-lang="es"] {
+    text-decoration: underline;
+}
